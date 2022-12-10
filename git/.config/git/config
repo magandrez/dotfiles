@@ -1,0 +1,26 @@
+[user]
+	name = Manuel González
+	email = manuel@manuel.is
+	signingKey = 0C72166F87541FE1
+        [includeIf "gitdir:~/workbench/"]
+                   path = ~/workbench/.gitconfig
+[push]
+	default = current
+[alias]
+	commend = commit --amend --no-edit
+	grog = log --graph --abbrev-commit --decorate --all --format=format:\"%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(dim white) - %an%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n %C(white)%s%C(reset)\"
+[pull]
+	rebase = true
+[rebase]
+        autostash = true
+[color] 
+        diff = auto
+        status = auto
+        branch = auto
+        ui = auto
+[fetch]
+	prune = true
+[commit]
+	gpgSign = true
+[init]
+	defaultBranch = main

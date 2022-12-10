@@ -1,0 +1,6 @@
+[user]
+    name = Manuel González
+    email = manuel@compensate.com
+    signingKey = B10FDF745EB305C2
+[commit]
+    gpgSign = true
