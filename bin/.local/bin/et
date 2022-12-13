@@ -1,0 +1,3 @@
+#!/bin/sh
+
+TERM=xterm-256color /bin/emacsclient -t --socket-name=hecatemacs "$@"

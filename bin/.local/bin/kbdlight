@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# Uses light https://github.com/haikarainen/light (built from source)
+light -Srs "sysfs/leds/tpacpi::kbd_backlight" 0
