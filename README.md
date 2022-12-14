@@ -1,6 +1,6 @@
 # dotfiles
 
-My personal configurations for GNU/Linux systems.
+My personal configurations for GNU/Linux systems using [stow](https://www.gnu.org/software/stow/).
 
 ## Excluded
 
