@@ -6,6 +6,9 @@ fi
 
 for name in "${@}"; do
     value=$(eval echo \"\$${name}\")
-    emacsclient --socket-name=hecatemacs -e "(setenv \"${name}\" \"${value}\")" >/dev/null
+    emacsclient --socket-name=hecatemacs -e "(setenv \"${name}\" \"${value}\" )" >/dev/null
+    if test "${name}" = 'NVM_BIN'; then
+        emacsclient --socket-name=hecatemacs -e "(add-to-list 'exec-path \"${value}\")" >/dev/null
+    fi
 done
 
