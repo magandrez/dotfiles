@@ -1,0 +1,18 @@
+[Unit]
+Description=Emacs Daemon
+After=kbfs.service gpg-agent.service
+#ConditionPathIsMountPoint=/keybase/private
+#Wants=keybase-redirector.service keybase.service
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/emacs --daemon=hecatemacs
+ExecStop=/usr/bin/emacsclient --eval "(progn (setq kill-emacs-hook 'nil) (kill-emacs))"
+Environment=SHELL=/bin/fish
+Environment=SSH_AUTH_SOCK=%t/keyring/ssh
+Environment=GPG_AGENT_INFO=%t/gnupg/S.gpg-agent:0:1
+Environment=GOPATH=%h/workbench/go
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
