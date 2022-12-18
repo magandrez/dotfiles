@@ -16,3 +16,8 @@ For security reasons, excluded from this repo are:
 - `scrot` and `xclip`.
 - `xautolock`.
 - `mate-power-manager`.
+
+## Requirements
+
+- GNU Make
+- GNU Stow
