@@ -24,3 +24,5 @@
 	gpgSign = true
 [init]
 	defaultBranch = main
+[github]
+	user = magandrez
