@@ -1,3 +1,5 @@
+set -gx SHELL /bin/fish
+set -gx EDITOR ~/.local/bin/et
 set -gx GOPATH ~/workbench/go
 set -gx KUBECONFIG ~/.kube/config
 set -gx DOCKER_BUILDKIT 1
