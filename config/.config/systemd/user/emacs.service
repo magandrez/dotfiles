@@ -1,6 +1,6 @@
 [Unit]
 Description=Emacs Daemon
-After=kbfs.service gpg-agent.service
+After=keybase.mount gpg-agent.service
 #ConditionPathIsMountPoint=/keybase/private
 #Wants=keybase-redirector.service keybase.service
 
