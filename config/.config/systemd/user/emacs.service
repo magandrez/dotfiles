@@ -12,6 +12,7 @@ Environment=SHELL=/bin/fish
 Environment=SSH_AUTH_SOCK=%t/ssh-agent.socket
 Environment=GPG_AGENT_INFO=%t/gnupg/S.gpg-agent:0:1
 Environment=GOPATH=%h/workbench/go
+Environment=COLORTERM=truecolor
 Restart=on-failure
 
 [Install]
