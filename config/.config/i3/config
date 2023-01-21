@@ -268,10 +268,10 @@ bindsym $mod+Delete mode "$mode_system"
 # exec --no-startup-id xautolock -locker i3lock-fancy -nowlocker i3lock-fancy -time 3 &
 
 # Keyboard shenanigans
-exec --no-startup-id ibus-daemon
+exec_always --no-startup-id ibus-daemon -rxR
 
 # Keyboard layouts
-exec --no-startup-id setxkbmap -model pc105 -layout fi,es -variant qwerty -option grp:alt_space_toggle,ctrl:swapcaps
+#exec --no-startup-id setxkbmap -model pc105 -layout fi,es -variant qwerty -option grp:alt_space_toggle,ctrl:swapcaps
 
 # Wallpaper
 exec_always --no-startup-id ~/.local/bin/fehbg
