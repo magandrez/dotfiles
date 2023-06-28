@@ -26,3 +26,5 @@
 	defaultBranch = main
 [github]
 	user = magandrez
+[core]
+	autocrlf = input
