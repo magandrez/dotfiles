@@ -1,12 +1,11 @@
 [Unit]
 Description=Emacs Daemon
-After=keybase.mount gpg-agent.service
-#ConditionPathIsMountPoint=/keybase/private
-#Wants=keybase-redirector.service keybase.service
+After=gpg-agent.service
+#ConditionPathIsMountPoint=/home/manuel/Dropbox
 
 [Service]
 Type=forking
-ExecStart=/usr/bin/emacs --daemon=hecatemacs
+ExecStart=/usr/bin/emacs --daemon=hademacs
 ExecStop=/usr/bin/emacsclient --eval "(progn (setq kill-emacs-hook 'nil) (kill-emacs))"
 Environment=SHELL=/bin/fish
 Environment=SSH_AUTH_SOCK=%t/ssh-agent.socket
