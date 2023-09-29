@@ -1,3 +1,3 @@
 #! /bin/sh
 
-/bin/emacsclient -c --socket-name=hademacs "$@" &
+/bin/emacsclient -r --socket-name=hademacs "$@" &
