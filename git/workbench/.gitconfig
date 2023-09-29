@@ -1,6 +1,6 @@
 [user]
     name = Manuel González
-    email = manuel@compensate.com
-    signingKey = B10FDF745EB305C2
+    email = manuel.gonzalez@carbonaide.com
+    signingKey = F2A515EA0BD7D222
 [commit]
     gpgSign = true
