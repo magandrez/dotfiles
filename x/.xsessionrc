@@ -8,9 +8,6 @@ export TERM=st-256color
 export GTK_IM_MODULE=ibus
 export QT_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
+export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
 
 systemctl --user import-environment DISPLAY PATH TERMINAL TERM GTK_IM_MODULE QT_IM_MODULE XMODIFIERS
-
-
-
-
