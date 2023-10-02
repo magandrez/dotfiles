@@ -279,7 +279,7 @@ exec_always --no-startup-id ibus-daemon -rxR
 exec_always --no-startup-id ~/.local/bin/fehbg
 
 # Setup screen
-exec --no-startup-id ~/.screenlayout/home.sh
+# exec --no-startup-id ~/.screenlayout/home.sh
 
 # Network manager tray
 exec --no-startup-id connman-gtk --tray
