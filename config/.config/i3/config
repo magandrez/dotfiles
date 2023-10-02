@@ -265,8 +265,9 @@ mode "$mode_system" {
 
 bindsym $mod+Delete mode "$mode_system"
 
-# Autolock (handled as systemd service instead)
+# Autolock (handled with xss-lock instead as it listens to systemd events)
 # exec --no-startup-id xautolock -locker i3lock-fancy -nowlocker i3lock-fancy -time 3 &
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock-fancy
 
 # Keyboard shenanigans
 exec_always --no-startup-id ibus-daemon -rxR
