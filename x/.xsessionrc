@@ -3,6 +3,10 @@ if [ -d "$HOME/.local/bin" ]; then
     PATH="$HOME/.local/bin:/snap/bin:$PATH"
 fi
 
+# Disable bell
+xset -b
+
+# Env vars
 export TERMINAL=~/.local/bin/st
 export TERM=st-256color
 export GTK_IM_MODULE=ibus
