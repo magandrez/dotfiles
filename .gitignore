@@ -1,2 +1,3 @@
 x/.Xauthority
 fonts/
+config/.config/systemd/user/*.wants/
