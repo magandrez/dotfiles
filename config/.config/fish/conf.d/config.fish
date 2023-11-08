@@ -15,6 +15,4 @@ abbr -a -- - 'cd -'
 # Theme related
 set -g theme_display_date no
 set -g theme_display_cmd_duration no
-
 set -g fish_term24bit 1
-#rvm default
