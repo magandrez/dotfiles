@@ -3,4 +3,4 @@
 # load_nvm > /dev/stderr
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/usr/local/google-cloud-sdk/path.fish.inc' ]; . '/usr/local/google-cloud-sdk/path.fish.inc'; end
+if [ -f '/usr/local/bin/gcloud/path.fish.inc' ]; . '/usr/local/bin/gcloud/path.fish.inc'; end
