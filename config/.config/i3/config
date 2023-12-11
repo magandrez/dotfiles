@@ -267,8 +267,40 @@ mode "$mode_system" {
 
 bindsym $mod+Delete mode "$mode_system"
 
-# Autolock (handled with xss-lock instead as it listens to systemd events)
+# Automatic locking of the screen after a period of time is handled in a user systemd service
+# systemctl --user cat screenlock.service
+# # /home/manuel/.config/systemd/user/screenlock.service
+# [Unit]
+# Description=Lock the screen automatically after a timeout
+
+# [Service]
+# Type=simple
+# Environment=DISPLAY=:0
+# Restart=no
+# ExecStart=/usr/bin/xautolock -time 3 -locker /usr/bin/i3lock-fancy -detectsleep
+
+# [Install]
+# WantedBy=default.target
+
 # exec --no-startup-id xautolock -locker i3lock-fancy -nowlocker i3lock-fancy -time 3 &
+
+# Locking of the screen on system suspend is handled in a systemd service
+#  sudo systemctl cat sleep-lock.service
+# # /etc/systemd/system/sleep-lock.service
+# [Unit]
+# Description=Lock on sleep
+# Before=sleep.target
+
+# [Service]
+# Type=simple
+# User=manuel
+# Environment=DISPLAY=:0
+# ExecStart=-/usr/bin/i3lock-fancy
+# ExecStartPost=/usr/bin/sleep 0.1
+
+# [Install]
+# WantedBy=sleep.target
+
 # exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock-fancy
 
 # Keyboard shenanigans
