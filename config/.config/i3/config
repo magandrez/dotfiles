@@ -316,7 +316,7 @@ exec_always --no-startup-id ~/.local/bin/fehbg
 # exec --no-startup-id ~/.screenlayout/home.sh
 
 # Network manager tray
-exec --no-startup-id connman-gtk --tray
+exec --no-startup-id nm-applet
 
 # Bluetooth applet
 exec --no-startup-id blueman-applet
