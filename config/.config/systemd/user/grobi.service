@@ -3,7 +3,7 @@ Description=grobi display auto config daemon
 
 [Service]
 Type=simple
-ExecStart=/bin/fish -c "grobi watch -v"
+ExecStart=sh -c "grobi watch -v"
 Restart=always
 RestartSec=2s
 
