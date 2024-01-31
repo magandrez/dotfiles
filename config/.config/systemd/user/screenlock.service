@@ -7,4 +7,4 @@ Restart=no
 ExecStart=/usr/bin/xautolock -time 3 -locker /usr/bin/i3lock-fancy -detectsleep
 
 [Install]
-WantedBy=graphical.target
+WantedBy=default.target
