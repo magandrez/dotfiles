@@ -1,3 +1,3 @@
 #!/bin/sh
 
-systemctl --user stop screenlock.service && echo "Screensaver suspended for the meeting..."
+systemctl stop screenlock.service && echo "Screensaver suspended for the meeting..."

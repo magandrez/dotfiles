@@ -4,6 +4,8 @@ Description=Lock the screen automatically after a timeout
 [Service]
 Type=simple
 Restart=no
+Environment=DISPLAY=:0
+Environment=XAUTHORITY=/home/manuel/.Xauthority
 ExecStart=/usr/bin/xautolock -time 3 -locker /usr/bin/i3lock-fancy -detectsleep
 
 [Install]
