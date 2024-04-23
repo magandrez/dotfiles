@@ -12,7 +12,14 @@ For security reasons, excluded from this repo are:
 ## Recommended tools
 
 - `i3wm` with `lightdm`.
-- `fish` shell with `omf` and `bass`.
+- `fish` shell with `omf` with:
+  - `bobthefish` theme.
+  - `bass` plugin (necessary for nvm).
+  - `foreign-env` plugin (necessary for nvm)
+- `direnv` to dynamically update the PATH upon folder change using `.envrc`
+  files.
+- `nvm` to manage Node versions.
+- `pyenv` to manage Python versions.
 - `dmenu`, `i3blocks` and `i3lock-fancy`.
 - `scrot` and `xclip`.
 - `xautolock`.
@@ -21,7 +28,6 @@ For security reasons, excluded from this repo are:
 - `feh`
 - `blueman-applet`
 - `connman-gtk`
-- `nvm` and `rvm`
 - `git`
 - `light`
 
