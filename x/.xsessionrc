@@ -1,6 +1,6 @@
 # set PATH so it includes stuff from .local/bin (python stuff etc)
 if [ -d "$HOME/.local/bin" ]; then
-    PATH="$HOME/.local/bin:/snap/bin:$PATH"
+    PATH="$HOME/.local/bin:$PATH"
 fi
 
 # Disable bell
