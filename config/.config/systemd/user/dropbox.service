@@ -1,6 +1,6 @@
 [Unit]
 Description=Dropbox as a user service
-After=local-fs.target network.target
+After=network-online.target
 
 [Service]
 Type=simple
