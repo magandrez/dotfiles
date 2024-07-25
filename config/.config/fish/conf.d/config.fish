@@ -16,6 +16,8 @@ abbr -a -- - 'cd -'
 set -g theme_display_date no
 set -g theme_display_cmd_duration no
 set -g fish_term24bit 1
+set -g theme_powerline_fonts no
+set -g theme_nerd_fonts no
 
 # Alias
 alias bat=/usr/bin/batcat
