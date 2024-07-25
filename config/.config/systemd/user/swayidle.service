@@ -1,0 +1,18 @@
+[Unit]
+Description=Idle manager for Wayland
+Documentation=man:swayidle(1)
+After=sway.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/swayidle -w -d
+Restart=always
+# wait 2 seconds before retrying instead of 100ms
+#
+# this will keep the service trying without tripping the
+# StartLimitBurst, while giving sway possibly time to properly
+# initialize
+RestartSec=2s
+
+[Install]
+WantedBy=sway-session.target
