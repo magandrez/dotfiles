@@ -54,13 +54,10 @@ output eDP-1 resolution 1920x1200 position 0,0
 # Read `man 5 sway-input` for more information about this section.
 
 input * {
+      xkb_model "pc105"
       xkb_layout "fi,es"
       xkb_variant "qwerty"
       xkb_options "grp:alt_space_toggle,ctrl:swapcaps"
-}
-
-input "1:1:AT_Translated_Set_2_keyboard" {
-      xkb_model "pc105"
 }
 
 ### Key bindings
