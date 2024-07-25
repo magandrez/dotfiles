@@ -260,7 +260,12 @@ bindsym XF86MonBrightnessUp exec brightnessctl set 10%+
 #
 bindsym $mod+Ctrl+l exec kbdlighttoggle
 
-include /etc/sway/config.d/*
-
 # Notification Daemon
 exec swaync
+
+#
+# Screenshots
+#
+bindsym --release Print exec grim -g "$(slurp)" - | swappy -f -
+
+include /etc/sway/config.d/*
