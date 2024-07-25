@@ -1,0 +1,9 @@
+#!/bin/env sh
+
+state=$(brightnessctl -q --device='tpacpi::kbd_backlight' get)
+if [ "$state" = 2 ]
+then
+    brightnessctl -q --device='tpacpi::kbd_backlight' set 0
+else
+    brightnessctl -q --device='tpacpi::kbd_backlight' set 2
+fi
