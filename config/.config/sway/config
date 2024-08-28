@@ -8,7 +8,6 @@
 #
 # Logo key. Use Mod1 for Alt.
 set $mod Mod1
-# Home row direction keys, like vim
 set $left j
 set $down k
 set $up i
@@ -94,10 +93,18 @@ set $lock 'swaylock -f -i /home/manuel/pics/bg.jpg --scaling fill'
 bindsym $mod+Delete exec $lock
 bindsym Pause exec $lock
 
-exec swayidle -w timeout 120 'swaylock -f -i /home/manuel/pics/bg.jpg --scaling fill' timeout 180 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' before-sleep 'swaylock -f -i /home/manuel/pics/bg.jpg --scaling fill'
+exec swayidle -w \
+	timeout 240 'swaylock -f -i /home/manuel/pics/bg.jpg --scaling fill' \
+	timeout 245 'swaymsg "output * power off"' \
+	resume 'swaymsg "output * power on"' \
+        before-sleep 'playerctl pause; swaylock -i /home/manuel/pics/bg.jpg --scaling fill'
 
 #
-# Moving around:
+# Suspend
+bindsym $mod+Home exec 'swaylock -i /home/manuel/pics/bg.jpg --scaling fill' & systemctl suspend
+
+#
+# Moving Around:
 #
     # Move your focus around
     bindsym $mod+$left focus left
