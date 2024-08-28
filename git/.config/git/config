@@ -3,7 +3,7 @@
 	email = manuel@manuel.is
 	signingKey = 0C72166F87541FE1
         gpgSign = true
-        [includeIf "gitdir:~/workbench/work"]
+        [includeIf "gitdir:~/workbench/work/"]
                    path = ~/workbench/work/.gitconfig
 [push]
 	default = current
