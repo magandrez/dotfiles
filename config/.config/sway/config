@@ -141,7 +141,7 @@ bindsym $mod+Home exec 'swaylock -i /home/manuel/pics/bg.jpg --scaling fill' & s
     set $ws6 6
     set $ws7 7
     set $ws8 8
-    set $ws9 9 
+    set $ws9 9 󰝚
 
 
     # switch to workspace
