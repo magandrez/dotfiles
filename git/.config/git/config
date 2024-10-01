@@ -29,3 +29,5 @@
 	user = magandrez
 [core]
 	autocrlf = input
+[gpg]
+	program = gpg
