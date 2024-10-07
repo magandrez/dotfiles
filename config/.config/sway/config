@@ -93,11 +93,7 @@ set $lock 'swaylock -f -i /home/manuel/pics/bg.jpg --scaling fill'
 bindsym $mod+Delete exec $lock
 bindsym Pause exec $lock
 
-exec swayidle -w \
-	timeout 240 'swaylock -f -i /home/manuel/pics/bg.jpg --scaling fill' \
-	timeout 245 'swaymsg "output * power off"' \
-	resume 'swaymsg "output * power on"' \
-        before-sleep 'playerctl pause; swaylock -i /home/manuel/pics/bg.jpg --scaling fill'
+exec swayidle -w timeout 90 'swaylock -f -i /home/manuel/pics/bg.jpg --scaling fill' timeout 245 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' before-sleep 'playerctl pause; swaylock -i /home/manuel/pics/bg.jpg --scaling fill'
 
 #
 # Suspend
