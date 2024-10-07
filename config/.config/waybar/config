@@ -6,7 +6,7 @@
     // "width": 120, // Waybar width
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/language"],
-    "modules-right": ["cpu", "memory", "pulseaudio#input", "pulseaudio#output", "battery", "network", "bluetooth", "clock", "tray"],
+    "modules-right": ["cpu", "memory", "pulseaudio#input", "pulseaudio#output", "battery", "network", "clock", "tray"],
     "mode": {
 	"docked": {
 	    "output": ["eDP-1","DP-1"],
