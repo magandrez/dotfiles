@@ -31,6 +31,12 @@ For security reasons, excluded from this repo are:
 - `git`
 - `light`
 
+## Fonts
+
+Droid Sans Mono for Powerline Nerd Font Complete
+Font Awesome 6 
+InconsolataGo
+
 ## Requirements
 
 - GNU Make
