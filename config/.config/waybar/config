@@ -16,13 +16,13 @@
      "sway/workspaces": {
          "disable-scroll": true,
          "disable-markup" : false,
-         "format":" {icon} ",
+         "format":"  {icon} ",
          "format-icons": {
-             "1": "",
-             "2": "",
-             "3": "",
-             "4": "",
-             "9": "󰝚",
+             "1": "1 ",
+             "2": "2 ",
+             "3": "3 ",
+             "4": "4 ",
+             "9": "9 ",
          }
      },
      "sway/language": {
@@ -55,7 +55,7 @@
         "format": "<span color=\"#f1fa8c\"></span>  {usage}%  ({load})"
     },
     "memory": {
-        "format": "{}% ",
+        "format": "  {}%",
         "interval": 5,
         "exec": "free -h | awk '/Mem:/{printf $3/$2 * 100.0}'",
         "tooltip": false,
@@ -111,14 +111,4 @@
         "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
         "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%"
    },
-    "bluetooth": {
-        "format-on": "",
-        "format-connected": "",
-        "format-off": "", // an empty format will hide the module
-        "on-click": "blueman-manager",
-        "tooltip-format-connected": "{device_enumerate}",
-        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
-
-  },
-
 }
