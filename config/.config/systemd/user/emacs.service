@@ -5,13 +5,10 @@ After=gpg-agent.service
 
 [Service]
 Type=forking
-ExecStart=/usr/bin/emacs --daemon=hademacs
+ExecStart=/usr/bin/emacs --daemon=apolloemacs
 ExecStop=/usr/bin/emacsclient --eval "(progn (setq kill-emacs-hook 'nil) (kill-emacs))"
-Environment=SHELL=/bin/fish
-Environment=SSH_AUTH_SOCK=%t/ssh-agent.socket
-Environment=GPG_AGENT_INFO=%t/gnupg/S.gpg-agent:0:1
-Environment=GOPATH=%h/workbench/go
 Environment=COLORTERM=truecolor
+Environment=GPG_AGENT_INFO=%t/gnupg/S.gpg-agent
 Restart=on-failure
 
 [Install]

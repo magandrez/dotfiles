@@ -1,14 +1,14 @@
 #!/bin/env sh
 
-if [ "$(emacsclient --socket-name=hademacs -e t)" != 't' ]; then
+if [ "$(emacsclient --socket-name=apolloemacs -e t)" != 't' ]; then
     return 1
 fi
 
 for name in "${@}"; do
     value=$(eval echo \"\$${name}\")
-    emacsclient --socket-name=hademacs -e "(setenv \"${name}\" \"${value}\" )" >/dev/null
+    emacsclient --socket-name=apolloemacs -e "(setenv \"${name}\" \"${value}\" )" >/dev/null
     if test "${name}" = 'NVM_BIN'; then
-        emacsclient --socket-name=hademacs -e "(add-to-list 'exec-path \"${value}\")" >/dev/null
+        emacsclient --socket-name=apolloemacs -e "(add-to-list 'exec-path \"${value}\")" >/dev/null
     fi
 done
 
