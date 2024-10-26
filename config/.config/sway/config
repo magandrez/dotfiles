@@ -277,3 +277,4 @@ exec blueman-applet
 #
 bindsym --release Print exec grim -g "$(slurp)" - | swappy -f -
 
+exec_always systemctl --user start sway-session.target
