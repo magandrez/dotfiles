@@ -3,7 +3,7 @@ Description=GnuPG cryptographic agent and passphrase cache
 Documentation=man:gpg-agent(1)
 
 [Service]
-ExecStart=/usr/bin/gpg-agent --supervised
+ExecStart=/usr/bin/gpg-agent --supervised --options %h/.gnupg/gpg-agent.conf
 ExecReload=/usr/bin/gpgconf --reload gpg-agent
 
 [Install]
