@@ -58,7 +58,6 @@ output DP-1 resolution 3840x2160 position 1920,0
 input * {
       xkb_model "pc105"
       xkb_layout "fi,es"
-      xkb_variant "qwerty"
       xkb_options "grp:alt_space_toggle,ctrl:swapcaps"
 }
 
