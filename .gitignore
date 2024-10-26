@@ -1,3 +1,6 @@
 x/.Xauthority
 fonts/
 config/.config/systemd/user/*.wants/
+gpg/.gnupg/*
+!gpg/.gnupg/gpg-agent.conf
+!gpg/.gnupg/gpg.conf

@@ -1,4 +1,3 @@
-# /usr/lib/systemd/user/gpg-agent.socket
 [Unit]
 Description=GnuPG cryptographic agent and passphrase cache
 Documentation=man:gpg-agent(1)
