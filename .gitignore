@@ -4,3 +4,6 @@ config/.config/systemd/user/*.wants/
 gpg/.gnupg/*
 !gpg/.gnupg/gpg-agent.conf
 !gpg/.gnupg/gpg.conf
+bin/.local/state/*
+bin/.local/share/*
+!bin/.local/share/applications
