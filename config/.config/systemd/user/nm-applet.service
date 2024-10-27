@@ -1,0 +1,12 @@
+[Unit]
+Description=Network Manager applet
+Documentation=man:nm-applet(1)
+BindsTo=sway-session.target
+After=sway.service
+
+[Service]
+Type=simple
+Environment=GTK_USE_PORTAL=1
+ExecStart=/usr/bin/nm-applet --indicator
+[Install]
+WantedBy=sway-session.target

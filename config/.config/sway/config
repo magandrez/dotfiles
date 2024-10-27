@@ -259,11 +259,6 @@ bindsym $mod+Ctrl+l exec kbdlighttoggle
 exec swaync
 
 #
-# Network Manager tray
-#
-exec GTK_USE_PORTAL=1 nm-applet --indicator
-
-#
 # Screenshots
 #
 bindsym --release Print exec grim -g "$(slurp)" - | swappy -f -
