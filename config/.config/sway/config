@@ -7,8 +7,6 @@
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
-include /etc/sway/config.d/*
-
 set $mod Mod1
 set $left j
 set $down k
@@ -255,4 +253,5 @@ bindsym XF86MonBrightnessUp exec brightnessctl set 10%+
 #
 bindsym --release Print exec grim -g "$(slurp)" - | swappy -f -
 
+include /etc/sway/config.d/*
 exec_always systemctl --user start sway-session.target
