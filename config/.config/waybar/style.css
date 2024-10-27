@@ -1,8 +1,8 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: 'Inter';
-    font-size: 14px;
+    font-family: "Inter", "Font Awesome";
+    font-size: 16px;
     min-height: 0;
 }
 
@@ -60,7 +60,7 @@ window#waybar.hidden {
 }
 
 #clock {
-    min-width: 100px;
+    min-width: 150px;
 }
 
 @keyframes blink {

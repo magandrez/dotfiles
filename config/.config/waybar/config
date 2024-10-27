@@ -6,7 +6,7 @@
     // "width": 120, // Waybar width
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/language"],
-    "modules-right": ["cpu", "memory", "pulseaudio#input", "pulseaudio#output", "battery", "network", "clock", "tray"],
+    "modules-right": ["cpu","temperature", "memory", "pulseaudio#input", "pulseaudio#output", "battery", "network", "clock", "tray"],
     "mode": {
 	"docked": {
 	    "output": ["eDP-1","DP-1"],
@@ -16,13 +16,13 @@
      "sway/workspaces": {
          "disable-scroll": true,
          "disable-markup" : false,
-         "format":"  {icon} ",
+         "format":" {icon} ",
          "format-icons": {
-             "1": "1 ",
-             "2": "2 ",
-             "3": "3 ",
-             "4": "4 ",
-             "9": "9 ",
+             "1": "",
+             "2": "",
+             "3": "",
+             "4": "",
+             "9": "",
          }
      },
      "sway/language": {
@@ -32,7 +32,7 @@
         "on-click": "swaymsg input type:keyboard xkb_switch_layout next",
     },
    "tray": {
-        "icon-size": 18,
+        "icon-size": 24,
         "spacing": 3
     },
     "clock": {
@@ -52,7 +52,15 @@
       "tooltip-format": "{:%e %B %Y}",
     },
     "cpu": {
-        "format": "<span color=\"#f1fa8c\"></span>  {usage}%  ({load})"
+        "format": "  {usage}%  ({load})"
+    },
+    "temperature": {
+        "thermal-zone": 2,
+        "hwmon-path": "/sys/class/hwmon/hwmon4/temp1_input",
+        "critical-threshold": 80,
+        "format-critical": "{icon} {temperatureC}°C",
+        "format": "{icon} {temperatureC}°C",
+        "format-icons": ["", "", ""]
     },
     "memory": {
         "format": "  {}%",
