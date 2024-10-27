@@ -226,9 +226,9 @@ client.urgent           #282a36 #900000 #ffffff #900000   #282a36
 client.placeholder      #282a36 #0c0c0c #ffffff #000000   #282a36 
 
 #
-# Status Bar:
+# Status Bar
 #
-# Read `man 5 sway-bar` for more information about this section.
+# Read `man 5 waybar` for more information about this section.
 bar {
     position top
     swaybar_command waybar
@@ -253,5 +253,11 @@ bindsym XF86MonBrightnessUp exec brightnessctl set 10%+
 #
 bindsym --release Print exec grim -g "$(slurp)" - | swappy -f -
 
+#
+# Power management
+#
+bindsym $mod+Escape exec wlogout -l "/home/manuel/.config/wlogout/layout" -C "/home/manuel/.config/wlogout/style.css" -s -n -b 2
+
 include /etc/sway/config.d/*
+
 exec_always systemctl --user start sway-session.target
