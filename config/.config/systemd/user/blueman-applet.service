@@ -1,0 +1,13 @@
+# /usr/lib/systemd/user/blueman-applet.service
+[Unit]
+Description=Bluetooth management applet
+BindsTo=sway-session.target
+After=sway.service
+
+[Service]
+Type=dbus
+BusName=org.blueman.Applet
+ExecStart=/usr/bin/blueman-applet
+
+[Install]
+WantedBy=sway-session.target
