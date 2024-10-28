@@ -87,7 +87,7 @@ bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. 
 
 #
 # Lock screen 
-set $lock 'swaylock -f -i "/home/manuel/Documents/pics/lock.jpg" --scaling fill'
+set $lock 'swaylock -f -C "/home/manuel/.config/swaylock/config"'
 bindsym $mod+Delete exec $lock
 bindsym Pause exec $lock
 
