@@ -256,7 +256,8 @@ bindsym --release Print exec grim -g "$(slurp)" - | swappy -f -
 #
 # Power management
 #
-bindsym $mod+Escape exec wlogout -l "/home/manuel/.config/wlogout/layout" -C "/home/manuel/.config/wlogout/style.css" -s -n -b 2
+set $logout wlogout -l "/home/manuel/.config/wlogout/layout" -C "/home/manuel/.config/wlogout/style.css" -s -n -b 2
+bindsym $mod+Escape exec $logout
 
 include /etc/sway/config.d/*
 
