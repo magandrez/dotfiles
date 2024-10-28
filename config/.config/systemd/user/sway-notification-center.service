@@ -1,12 +1,16 @@
 [Unit]
-Description=Sway Notification Center
-Documentation=man:swaync(1)
+Description=Swaync notification daemon
+Documentation=https://github.com/ErikReider/SwayNotificationCenter
 BindsTo=sway-session.target
 After=sway.service
+ConditionEnvironment=WAYLAND_DISPLAY
 
 [Service]
-Type=simple
-ExecStart=/usr/bin/swaync
+Type=dbus
+BusName=org.freedesktop.Notifications
+ExecStart=/usr/bin/swaync -s %h/.config/swaync/style.css -c %/.config/swaync/config.json
+ExecReload=/usr/bin/swaync-client --reload-config ; /usr/bin/swaync-client --reload-css
+Restart=on-failure
 
 [Install]
 WantedBy=sway-session.target
