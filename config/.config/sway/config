@@ -261,6 +261,11 @@ set $notifier swaync-client -t
 bindsym $mod+y exec $notifier
 
 #
+# Pass wrapper for fuzzel
+#
+bindsym $mod+u exec tessen -d fuzzel -a copy
+
+#
 # Other includes (see folder)
 #
 include /etc/sway/config.d/*
