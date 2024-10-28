@@ -255,6 +255,12 @@ set $logout wlogout -l "/home/manuel/.config/wlogout/layout" -C "/home/manuel/.c
 bindsym $mod+Escape exec $logout
 
 #
+# Notification center
+#
+set $notifier swaync-client -t
+bindsym $mod+y exec $notifier
+
+#
 # Other includes (see folder)
 #
 include /etc/sway/config.d/*

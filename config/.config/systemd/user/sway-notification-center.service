@@ -8,7 +8,7 @@ ConditionEnvironment=WAYLAND_DISPLAY
 [Service]
 Type=dbus
 BusName=org.freedesktop.Notifications
-ExecStart=/usr/bin/swaync -s %h/.config/swaync/style.css -c %/.config/swaync/config.json
+ExecStart=/usr/bin/swaync -s %h/.config/swaync/style.css -c %h/.config/swaync/config.json
 ExecReload=/usr/bin/swaync-client --reload-config ; /usr/bin/swaync-client --reload-css
 Restart=on-failure
 

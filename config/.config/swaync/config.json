@@ -36,8 +36,6 @@
     }
   },
   "widgets": [
-    "menubar#label",
-    "buttons-grid",
     "backlight",
     "backlight#KB",
     "volume",
@@ -64,7 +62,7 @@
       "image-radius": 12
     },
     "backlight": {
-      "label": "",
+      "label": "",
       "device": "amdgpu_bl0",
       "min": 10
     },
@@ -75,69 +73,6 @@
     },
     "volume": {
       "label": ""
-    },
-    "menubar#label": {
-      "menu#power-buttons": {
-        "label": "", 
-        "position": "right",
-        "actions": [ 
-          {
-            "label": " Reboot",
-            "command": "systemctl reboot"
-          },
-          {
-            "label": " Lock",
-            "command": "swaylock -f"
-          },
-          {
-            "label": " Logout",
-            "command": "swaymsg exit"
-          },
-          {
-            "label": " Shut down",
-            "command": "systemctl poweroff"
-          }
-        ]
-      },
-      "menu#powermode-buttons": {
-        "label": "", 
-        "position": "left",
-        "actions": [ 
-          {
-            "label": "Performance",
-            "command": "powerprofilesctl set performance"
-          },
-          {
-            "label": "Balanced",
-            "command": "powerprofilesctl set balanced"
-          },
-          {
-            "label": "Power-saver",
-            "command": "powerprofilesctl set power-saver"
-          }
-        ]
-      },
-      "buttons#topbar-buttons": {
-        "position": "left",
-        "actions": [
-          {
-            "label": "",
-            "command": "grim"
-          }
-        ]
-      }
-    },
-    "buttons-grid": {
-      "actions": [
-        {
-          "label": "直",
-          "command": "~/.config/rofi/rofi-wifi-menu.sh"
-        },
-        {
-          "label": "",
-          "command": "~/.config/rofi/rofi-bluetooth"
-        }
-      ]
     }
   }
 }
