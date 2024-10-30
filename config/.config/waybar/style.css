@@ -60,7 +60,7 @@ window#waybar.hidden {
 }
 
 #clock {
-    min-width: 150px;
+    min-width: 130px;
 }
 
 @keyframes blink {
