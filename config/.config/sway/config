@@ -155,8 +155,8 @@ bindsym $mod+Shift+0 move container to workspace number 0
 #
 # Tweak certain windows
 #
-for_window [app_id="telegram"] floating enable
-assign [app_id="telegram"] workspace number 4
+# for_window [app_id="telegram"] floating enable
+# assign [app_id="telegram"] workspace number 4
 for_window [app_id="tauon"] floating enable
 assign [app_id="tauon"] workspace number 9
 
