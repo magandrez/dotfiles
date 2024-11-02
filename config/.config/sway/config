@@ -28,9 +28,11 @@ include /etc/sway/config-vars.d/*
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output * bg /home/manuel/Documents/pics/bg.jpg fill
+
 # You can get the names of your outputs by running: swaymsg -t get_outputs
-output eDP-1 resolution 1920x1200 position 0,0
-output DP-1 resolution 3840x2160 position 1920,0
+# For now, using Kanshi to manage outputs. See kanshi service + config
+#output eDP-1 resolution 1920x1200 position 0,0
+#output DP-1 resolution 3840x2160 position 1920,0
 
 ### Input configuration
 #
@@ -46,7 +48,7 @@ output DP-1 resolution 3840x2160 position 1920,0
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
-input * {
+input type:keyboard {
       xkb_model "pc105"
       xkb_layout "fi,es"
       xkb_options "grp:alt_space_toggle,ctrl:swapcaps"
@@ -74,17 +76,16 @@ floating_modifier $mod normal
 # Reload the configuration file
 bindsym $mod+Shift+c reload
 
-# Exit sway (logs you out of your Wayland session)
-bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
-
 #
-# Lock screen 
+# Lock screen
+#
 set $lock 'swaylock -f -C "/home/manuel/.config/swaylock/config"'
 bindsym $mod+Delete exec $lock
 bindsym Pause exec $lock
 
 #
 # Suspend
+#
 bindsym $mod+Home exec systemctl suspend
 
 #
@@ -156,6 +157,8 @@ bindsym $mod+Shift+0 move container to workspace number 0
 #
 for_window [app_id="telegram"] floating enable
 assign [app_id="telegram"] workspace number 4
+for_window [app_id="tauon"] floating enable
+assign [app_id="tauon"] workspace number 9
 
 #
 # Layout stuff:

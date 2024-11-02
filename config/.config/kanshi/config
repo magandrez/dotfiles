@@ -1,0 +1,12 @@
+profile home {
+
+output 'Lenovo Group Limited LEN T32p-20 VNA41G9T' mode 3840x2160@60.0Hz position 1920,0 transform normal scale 1.0 adaptive_sync on
+output 'California Institute of Technology 0x1404 Unknown' mode 1920x1200@60.001Hz position 0,420 transform normal scale 1.0 adaptive_sync on
+
+}
+
+profile laptop {
+
+output 'California Institute of Technology 0x1404 Unknown' mode 1920x1200@60.001Hz position 1920,0 transform normal scale 1.0 adaptive_sync on
+
+}
