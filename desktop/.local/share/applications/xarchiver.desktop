@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Extract to folder
+Comment=Extract archive to a folder with the same name
+Exec=xarchiver -e %F
+Terminal=false
+Type=Application
+Icon=xarchiver
+StartupNotify=true
+MimeType=text/plain;
