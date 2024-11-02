@@ -1,0 +1,20 @@
+[MIME Cache]
+application/x-shellscript=em.desktop;
+inode/directory=pcmanfm.desktop;
+text/english=em.desktop;
+text/plain=em.desktop;xarchiver.desktop;
+text/x-c=em.desktop;
+text/x-c++=em.desktop;
+text/x-c++hdr=em.desktop;
+text/x-c++src=em.desktop;
+text/x-chdr=em.desktop;
+text/x-csrc=em.desktop;
+text/x-java=em.desktop;
+text/x-makefile=em.desktop;
+text/x-moc=em.desktop;
+text/x-pascal=em.desktop;
+text/x-tcl=em.desktop;
+text/x-tex=em.desktop;
+x-scheme-handler/onepassword=1pass.desktop;
+x-scheme-handler/tg=Telegram.desktop;
+x-scheme-handler/tonsite=Telegram.desktop;
