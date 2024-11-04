@@ -5,8 +5,10 @@ output 'California Institute of Technology 0x1404 Unknown' mode 1920x1200@60.001
 
 }
 
-profile laptop {
+profile office {
 
-output 'California Institute of Technology 0x1404 Unknown' mode 1920x1200@60.001Hz position 1920,0 transform normal scale 1.0 adaptive_sync on
+output 'Lenovo Group Limited LEN T27h-2L VNA920HL' mode  2560x1440@59.951Hz position 1136,0 transform normal scale 1.0 adaptive_sync on
+
+output 'California Institute of Technology 0x1404 Unknown' mode  1920x1200@60.001Hz position 1476,1440 transform normal scale 1.0 adaptive_sync on
 
 }
