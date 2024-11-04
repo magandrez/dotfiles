@@ -16,5 +16,5 @@ text/x-pascal=em.desktop;
 text/x-tcl=em.desktop;
 text/x-tex=em.desktop;
 x-scheme-handler/onepassword=1pass.desktop;
-x-scheme-handler/tg=Telegram.desktop;
-x-scheme-handler/tonsite=Telegram.desktop;
+x-scheme-handler/tg=Telegram.desktop;org.telegram.desktop._4e452d0fb0cb7b22a12f5b4b43da8f48.desktop;
+x-scheme-handler/tonsite=Telegram.desktop;org.telegram.desktop._4e452d0fb0cb7b22a12f5b4b43da8f48.desktop;
