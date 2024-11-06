@@ -1,3 +1,3 @@
 #!/bin/sh
 
-systemctl --user stop swayiddle.service && echo "Screensaver suspended for the meeting..."
+systemctl --user stop swayidle.service && echo "Screensaver suspended for the meeting..."
