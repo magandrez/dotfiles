@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=meet!
+Comment=Prevent screensaver from taking over (usually used during meetings)
+Exec=meet!
+Terminal=false
+Type=Application
+Icon=network.cycles.wdisplays
+StartupNotify=true

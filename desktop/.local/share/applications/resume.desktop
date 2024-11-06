@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=resume
+Comment=Enable screensaver (oposite to meet! command)
+Exec=resume
+Terminal=false
+Type=Application
+Icon=network.cycles.wdisplays
+StartupNotify=true
