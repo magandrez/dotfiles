@@ -6,6 +6,7 @@ set -gx NVM_DIR /home/manuel/.nvm
 set -gx SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/ssh-agent.socket"
 contains /usr/local/go/bin $fish_user_paths; or set -Ua fish_user_paths /usr/local/go/bin
 contains ~/workbench/go/bin $fish_user_paths; or set -Ua fish_user_paths ~/workbench/go/bin
+contains ~/.pulumi/bin $fish_user_paths; or set -Ua fish_user_paths ~/.pulumi/bin/
 
 # No greeting
 set fish_greeting
