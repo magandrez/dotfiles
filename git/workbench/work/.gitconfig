@@ -3,3 +3,5 @@
 	email = manuel@resq-club.com
 	signingKey = DDC110C2D788CE8C
         gpgSign = true
+[github]
+	user = magandrez
