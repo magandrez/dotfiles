@@ -6,7 +6,7 @@
     // "width": 120, // Waybar width
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/language"],
-    "modules-right": ["cpu","temperature", "memory", "pulseaudio#input", "pulseaudio#output", "battery", "network", "clock", "tray"],
+    "modules-right": ["cpu","temperature", "memory", "pulseaudio#input", "pulseaudio#output", "battery", "power-profiles-daemon", "network", "clock", "tray"],
     "mode": {
 	"docked": {
 	    "output": ["eDP-1","DP-1"],
@@ -118,5 +118,16 @@
         "on-click": "pavucontrol",
         "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
         "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+   },
+   "power-profiles-daemon": {
+        "format": "{icon}",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons": {
+            "default": "",
+            "performance": "",
+            "balanced": "",
+            "power-saver": ""
+        },
    },
 }

@@ -51,12 +51,13 @@ window#waybar.hidden {
     margin: 0 10px 0 0;
 }
 
-#clock, #battery, #cpu, #memory, #temperature, #network, #pulseaudio.output, #pulseaudio.input, #mode, #bluetooth {
+#clock, #battery, #cpu, #memory, #temperature, #network, #pulseaudio.output, #pulseaudio.input, #mode, #bluetooth, #power-profiles-daemon {
     padding: 0 20px;
     margin: 0 2px 0 2px;
     background-color: #282a36;
     color: #ffffff;
     border-radius: 20px;
+    min-width: 22px;
 }
 
 #clock {
