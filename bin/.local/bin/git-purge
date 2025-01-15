@@ -4,7 +4,7 @@ set -e echo "Pulling latest code..."
 git pull
 echo "Deleting local branches that were removed in remote..."
 git fetch -p
-git branch --merged | awk '!/develop/' | xargs git branch -D
+git branch -r --merged | grep -v '\*\|master\|develop\|release' | sed 's/origin\///' | xargs -n 1 git push --delete origin
 echo "Remaining local branches:"
 git branch -vv
 echo "Done."
