@@ -2,8 +2,7 @@ use_nvm() {
   watch_file .nvmrc
   local NVM_PATH="$HOME/.nvm/nvm.sh"
   . "${NVM_PATH}"
-  nvm install
-  layout node
+  nvm use
 }
 
 ### use a certain pyenv version
