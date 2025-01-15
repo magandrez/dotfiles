@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Slack
+StartupWMClass=Slack
+Comment=Slack Desktop
+GenericName=Slack Client for Linux
+Exec=flatpak run --socket=session-bus --socket=system-bus --socket=wayland com.slack.Slack --enable-features=WaylandWindowDecorations --ozone-platform-hint=auto
+Icon=com.slack.Slack
+Type=Application
+Categories=GNOME;GTK;Network;InstantMessaging;
+MimeType=x-scheme-handler/slack;
+X-Desktop-File-Install-Version=0.28
+X-Flatpak-RenamedFrom=slack.desktop
