@@ -3,8 +3,7 @@
 set -e echo "Pulling latest code..."
 git pull
 echo "Deleting local branches that were removed in remote..."
-git fetch -p
-git branch -r --merged | grep -v '\*\|master\|develop\|release' | sed 's/origin\///' | xargs -n 1 git push --delete origin
+git fetch -P && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D
 echo "Remaining local branches:"
 git branch -vv
 echo "Done."
