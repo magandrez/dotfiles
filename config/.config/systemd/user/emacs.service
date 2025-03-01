@@ -5,12 +5,13 @@ After=gpg-agent.service
 
 [Service]
 Type=forking
-ExecStart=/usr/bin/emacs --daemon=apolloemacs
-ExecStop=/usr/bin/emacsclient --eval "(progn (setq kill-emacs-hook 'nil) (kill-emacs))"
+ExecStart=/usr/local/bin/emacs --daemon=apolloemacs
+ExecStop=/usr/local/bin/emacsclient --eval "(progn (setq kill-emacs-hook 'nil) (kill-emacs))"
 Environment=NVM_DIR=%h/.nvm
 Environment=COLORTERM=truecolor
 Environment=SSH_AUTH_SOCK=%t/ssh-agent.socket
 Environment=GPG_AGENT_INFO=%t/gnupg/S.gpg-agent
+Environment=GDK_BACKEND=wayland
 Restart=on-failure
 
 [Install]
