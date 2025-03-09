@@ -1,41 +1,71 @@
+# Joins array-like elements into a regex pattern (removes reliance on Ruby regular expressions)
+re_join() {
+  local sep="$1"
+  shift
+  printf "%s" "$1"
+  shift
+  for arg in "$@"; do
+    printf "%s%s" "$sep" "$arg"
+  done
+  printf "\n"
+}
+
+# Reads the first line from a version file and sets it as the version (no Ruby dependency)
+read_version_file() {
+  local file
+  file="$(find_up_ "${@}")"
+
+  [[ -z "${file}" ]] && return
+
+  watch_file "${file}"
+  head -n 1 "${file}" 2>/dev/null | tr -d '[:space:]'
+}
+
+# Recursively finds a file in the directory tree
+find_up_() {
+  while true; do
+    for v in "${@}"; do
+      if [[ -f "${v}" ]]; then
+        echo "${PWD}/${v}"
+        return 0
+      fi
+    done
+
+    if [[ "${PWD}" == "/" ]] || [[ "${PWD}" == "//" ]]; then
+      return 1
+    fi
+
+    cd .. || return
+  done
+}
+
+# Activates a Node.js version
 use_nvm() {
-  watch_file .nvmrc
-  local NVM_PATH="$HOME/.nvm/nvm.sh"
-  . "${NVM_PATH}"
-  nvm use
-}
+  local version
+  version="$1"
 
-### use a certain pyenv version
-use_python() {
-    if [ -n "$(which pyenv)" ]; then
-        local pyversion=$1
-        pyenv local ${pyversion}
+  [[ "${version}" == --auto ]] && version="$(read_version_file .node-version .nvmrc)"
+  [[ -z "${version}" ]] && return
+
+  if [[ -f ~/.local/share/nvm/.index ]]; then
+    # Fish-specific nvm alternative with ~/.local/share/nvm
+    local -a installed
+    installed=($(find ~/.local/share/nvm -maxdepth 1 -mindepth 1 -type d -exec basename {} \;))
+
+    local installed_re
+    installed_re="$(re_join '|' "${installed[@]}")"
+
+    version="$(
+      grep -E "${installed_re}" ~/.local/share/nvm/.index | \
+      grep -E "${version}" | \
+      awk 'END {print $1}'
+    )"
+
+    [[ -z "${version}" ]] && return
+
+    if [[ -d ~/.local/share/nvm/"${version}"/bin ]]; then
+      PATH_add "$(cd ~/.local/share/nvm || exit; pwd -P)/${version}/bin"
+      export NVM_BIN=~/.local/share/nvm/"${version}/bin"
     fi
-}
-
-layout_virtualenv() {
-    local pyversion=$1
-    local pvenv=$2
-    if [ -n "$(which pyenv virtualenv)" ]; then
-        pyenv virtualenv --force --quiet ${pyversion} ${pvenv}-${pyversion}
-    fi
-    pyenv local --unset
-}
-
-layout_activate() {
-    if [ -n "$(which pyenv)" ]; then
-        source $(pyenv root)/versions/$1/bin/activate
-    fi
-}
-
-layout_poetry() {
-  if [[ ! -f pyproject.toml ]]; then
-    log_error 'No pyproject.toml found.  Use `poetry new` or `poetry init` to create one first.'
-    exit 2
   fi
-
-  local VENV=$(dirname $(poetry run which python))
-  export VIRTUAL_ENV=$(echo "$VENV" | rev | cut -d'/' -f2- | rev)
-  export POETRY_ACTIVE=1
-  PATH_add "$VENV"
 }
