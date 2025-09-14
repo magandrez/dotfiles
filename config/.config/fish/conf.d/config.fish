@@ -4,6 +4,7 @@ set -gx GOPATH ~/workbench/go
 set -gx DOCKER_BUILDKIT 1
 set -gx DOCKER_HOST unix:///run/user/1000/docker.sock
 set -gx SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/ssh-agent.socket"
+set -gx RIPGREP_CONFIG_PATH ~/.config/.ripgreprc
 contains /usr/local/go/bin $fish_user_paths; or set -Ua fish_user_paths /usr/local/go/bin
 contains ~/workbench/go/bin $fish_user_paths; or set -Ua fish_user_paths ~/workbench/go/bin
 contains ~/.pulumi/bin $fish_user_paths; or set -Ua fish_user_paths ~/.pulumi/bin
