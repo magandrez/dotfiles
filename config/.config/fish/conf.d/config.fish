@@ -1,3 +1,8 @@
+# XDG folders
+set -x XDG_CONFIG_HOME $HOME/.config
+set -x XDG_DATA_HOME $HOME/.local/share
+set -x XDG_CACHE_HOME $HOME/.cache
+# Random env variables
 set -gx SHELL /usr/bin/fish
 set -gx EDITOR ~/.local/bin/et
 set -gx GOPATH ~/workbench/go
