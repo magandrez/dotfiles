@@ -3,7 +3,7 @@ Name=Slack
 StartupWMClass=Slack
 Comment=Slack Desktop
 GenericName=Slack Client for Linux
-Exec=flatpak run --filesystem=home:ro --socket=session-bus --socket=system-bus --socket=wayland com.slack.Slack --enable-features=WaylandWindowDecorations --ozone-platform-hint=auto
+Exec=flatpak run --filesystem=home:ro --socket=session-bus --socket=system-bus --socket=wayland com.slack.Slack --enable-features=WaylandWindowDecorations --ozone-platform=wayland --branch=stable --arch=x86_64 --command=com.slack.Slack --file-forwarding
 Icon=com.slack.Slack
 Type=Application
 Categories=GNOME;GTK;Network;InstantMessaging;
