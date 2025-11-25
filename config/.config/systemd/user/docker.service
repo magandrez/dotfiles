@@ -4,7 +4,7 @@ Documentation=https://docs.docker.com/go/rootless/
 Requires=dbus.socket
 
 [Service]
-Environment=PATH=/usr/bin:/sbin:/usr/sbin:/home/manuel/.local/share/nvm/v20.9.0/bin:/usr/local/go/bin:/home/manuel/workbench/go/bin:/home/manuel/.local/bin:/home/manuel/.pulumi/bin:/home/manuel/.cargo/bin:/home/manuel/.local/bin:/usr/local/bin:/usr/bin:/bin
+Environment=PATH=/usr/bin:/sbin:/usr/sbin:/usr/local/go/bin:/usr/local/bin:/usr/bin:/bin
 ExecStart=/usr/bin/dockerd-rootless.sh
 ExecReload=/bin/kill -s HUP $MAINPID
 TimeoutSec=0
