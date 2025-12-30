@@ -8,7 +8,7 @@ set -gx EDITOR ~/.local/bin/et
 set -gx GOPATH ~/workbench/go
 set -gx DOCKER_BUILDKIT 1
 set -gx DOCKER_HOST unix:///run/user/1000/docker.sock
-set -gx SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/ssh-agent.socket"
+set -gx SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/openssh_agent"
 set -gx RIPGREP_CONFIG_PATH ~/.config/.ripgreprc
 set -gx ASDF_DATA_DIR $HOME/.local/share/asdf
 contains $HOME/.local/bin $fish_user_paths; or set -Ua fish_user_paths $HOME/.local/bin
