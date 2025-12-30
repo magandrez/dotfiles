@@ -2,7 +2,8 @@
 Description=Idle manager for Wayland
 Documentation=man:swayidle(1)
 BindsTo=sway-session.target
-After=sway.service
+PartOf=sway-session.target
+After=sway-session.target
 
 [Service]
 Type=simple

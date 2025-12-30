@@ -2,7 +2,8 @@
 Description=Swaync notification daemon
 Documentation=https://github.com/ErikReider/SwayNotificationCenter
 BindsTo=sway-session.target
-After=sway.service
+PartOf=sway-session.target
+After=sway-session.target
 ConditionEnvironment=WAYLAND_DISPLAY
 
 [Service]
