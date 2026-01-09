@@ -4,7 +4,7 @@ set -x XDG_DATA_HOME $HOME/.local/share
 set -x XDG_CACHE_HOME $HOME/.cache
 # Random env variables
 set -gx SHELL /usr/bin/fish
-set -gx EDITOR ~/.local/bin/et
+set -gx EDITOR emacsclient -t
 set -gx GOPATH ~/workbench/go
 set -gx DOCKER_BUILDKIT 1
 set -gx DOCKER_HOST unix:///run/user/1000/docker.sock
