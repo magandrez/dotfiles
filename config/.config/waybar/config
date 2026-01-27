@@ -4,7 +4,7 @@
     "height": 30,
     "margin": "5 10 5 10",
     "modules-left": ["sway/workspaces", "sway/language"],
-    "modules-right": ["cpu","temperature", "memory", "pulseaudio#input", "pulseaudio#output", "battery", "power-profiles-daemon", "network", "clock", "tray"],
+    "modules-right": ["cpu","temperature", "memory", "wireplumber", "wireplumber#source", "backlight", "battery", "power-profiles-daemon", "network", "clock", "tray"],
     "mode": {
 	"docked": {
 	    "output": ["eDP-1","DP-1"],
@@ -89,31 +89,21 @@
         "on-click": "foot -e 'nmtui'",
         "tooltip": false
     },
-    "pulseaudio#input": {
-        "format-source": "  {volume}%",
-        "format-source-muted": " off",
-        "format": "{format_source}",
-        "scroll-step": 1,
-        "smooth-scrolling-threshold": 1,
-        "max-volume": 100,
-        "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
-        "on-click-middle": "pavucontrol",
-        "on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ +1%",
-        "on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -1%"
+    "wireplumber": {
+	"format": "{volume}% {icon}",
+	"format-muted": " off",
+	"format-icons": ["", "", ""],
+	"on-click": "helvum",
+	"on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+	"scroll-step": 5
     },
-    "pulseaudio#output": {
-        "format": "{icon}   {volume}%",
-        "format-muted": " off",
-        "format-icons": {
-            "default": ["", "", ""]
-        },
-        "max-volume": 100,
-        "scroll-step": 5,
-        "smooth-scrolling-threshold": 1,
-        "on-click": "pavucontrol",
-        "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
-        "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%"
-   },
+    "wireplumber#source": {
+	"node-type": "Audio/Source",
+	"format": "  {volume}%",
+	"format-muted": " off",
+	"on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
+	"scroll-step": 5
+    },
    "power-profiles-daemon": {
         "format": "{icon}",
         "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
@@ -124,5 +114,9 @@
             "balanced": "",
             "power-saver": ""
         },
+   },
+   "backlight": {
+        "format": "{percent}% {icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
    },
 }

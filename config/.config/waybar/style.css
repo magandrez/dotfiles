@@ -51,7 +51,7 @@ window#waybar.hidden {
     margin: 0 10px 0 0;
 }
 
-#clock, #battery, #cpu, #memory, #temperature, #network, #pulseaudio.output, #pulseaudio.input, #mode, #bluetooth, #power-profiles-daemon {
+#clock, #battery, #cpu, #memory, #temperature, #network, #wireplumber, #mode, #bluetooth, #power-profiles-daemon, #backlight {
     padding: 0 20px;
     margin: 0 2px 0 2px;
     background-color: #282a36;
