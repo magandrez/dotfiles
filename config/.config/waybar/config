@@ -73,8 +73,6 @@
             "critical": 15
         },
         "format": "{icon}   {capacity}%",
-        // "format-good": "",
-        // "format-full": "",
         "format-icons": [
             "<span color=\"#ff5555\"></span>",
             "<span color=\"#ffb86c\"></span>",
