@@ -1,35 +1,35 @@
 * {
-	background-image: none;
+    background-image: none;
 }
 
 window {
-	background-color: rgba(17, 17, 27, 0.0);
+    background-color: rgba(17, 17, 27, 0.0);
 }
 
 button {
-	margin: 10px;
-	padding: 0;
-        color: #FFFFFF;
-	font-size: 2rem;
-	background-color: rgba(17, 17, 27, 0.9);
-	outline-style: none;
-	border: none;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 20%;
-	border-radius: 100px;
-	box-shadow: none;
-	text-shadow: none;
-    	animation: gradient_f 20s ease-in infinite;
+    margin: 10px;
+    padding: 0;
+    color: #FFFFFF;
+    font-size: 2rem;
+    background-color: rgba(17, 17, 27, 0.9);
+    outline-style: none;
+    border: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20%;
+    border-radius: 100px;
+    box-shadow: none;
+    text-shadow: none;
+    animation: gradient_f 20s ease-in infinite;
 }
 
 
 button:focus, button:active, button:hover {
-	background-color: #002b33;
-	outline-style: none;
-	background-size: 25%;
-	animation: gradient_f 20s ease-in infinite;
-	transition: all 0.3s cubic-bezier(.55,0.0,.28,1.682);
+    background-color: #002b33;
+    outline-style: none;
+    background-size: 25%;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s cubic-bezier(.55,0.0,.28,1.682);
 }
 
 #logout,
@@ -37,7 +37,7 @@ button:focus, button:active, button:hover {
 #shutdown,
 #reboot,
 #hibernate {
-	opacity: 0.9;
+    opacity: 0.9;
 }
 
 #logout {
@@ -57,5 +57,5 @@ button:focus, button:active, button:hover {
 }
 
 #hibernate {
-	background-image: image(url("./icons/hibernate.png"), url("./icons/hibernate.png"));
+    background-image: image(url("./icons/hibernate.png"), url("./icons/hibernate.png"));
 }
