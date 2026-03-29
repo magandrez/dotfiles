@@ -11,6 +11,12 @@
     "keybind" : "s"
 }
 {
+    "label" : "hibernate",
+    "action" : "systemctl hibernate",
+    "text" : "Hibernate",
+    "keybind" : "h"
+}
+{
     "label" : "suspend",
     "action" : "systemctl suspend",
     "text" : "Suspend",

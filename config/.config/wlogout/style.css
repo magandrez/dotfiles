@@ -32,8 +32,12 @@ button:focus, button:active, button:hover {
 	transition: all 0.3s cubic-bezier(.55,0.0,.28,1.682);
 }
 
-#logout, #suspend, #shutdown, #reboot {
-    opacity: 0.9;
+#logout,
+#suspend,
+#shutdown,
+#reboot,
+#hibernate {
+	opacity: 0.9;
 }
 
 #logout {
@@ -50,4 +54,8 @@ button:focus, button:active, button:hover {
 
 #reboot {
     background-image: image(url("./icons/reboot.png"), url("./icons/reboot.png"));
+}
+
+#hibernate {
+	background-image: image(url("./icons/hibernate.png"), url("./icons/hibernate.png"));
 }
