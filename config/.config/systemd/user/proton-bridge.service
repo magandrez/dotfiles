@@ -1,0 +1,14 @@
+[Unit]
+Description=Proton Mail Bridge (headless)
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/protonmail-bridge --noninteractive
+Restart=always
+Environment=PASSWORD_STORE_DIR=%h/.password-store
+
+# Optional but helps stability
+TimeoutStartSec=30
+
+[Install]
+WantedBy=default.target
