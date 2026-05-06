@@ -280,6 +280,12 @@ bindsym $mod+y exec $notifier
 bindsym $mod+u exec tessen -d fuzzel -a copy
 
 #
+# Bluetooth
+#
+bindsym XF86HangupPhone exec bluetoothctl power off
+bindsym XF86PickupPhone exec bluetoothctl power on
+
+#
 # Other includes (see folder)
 #
 include /etc/sway/config.d/*
