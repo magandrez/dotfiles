@@ -38,3 +38,5 @@
 	conflictstyle = diff3
 [branch]
 	autosetupmerge = true
+[diff]
+	submodule = log
