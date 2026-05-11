@@ -5,9 +5,18 @@ output 'Lenovo Group Limited 0x403A Unknown' mode 1920x1200@60.001Hz position 0,
 }
 
 profile office {
+    output "Lenovo Group Limited LEN P27u-10 0x01010101" {
+        mode 2560x1440
+        position 1920,0
+        scale 1.0
+        adaptive_sync off
+    }
 
-output 'Lenovo Group Limited LEN P27u-10 0x01010101' mode  2560x1440@59.951Hz position 1136,0 transform normal scale 1.0 adaptive_sync on
-output 'Lenovo Group Limited 0x403A Unknown' mode  1920x1200@60.001Hz position 1476,1440 transform normal scale 1.0 adaptive_sync on
+    output "Lenovo Group Limited 0x403A Unknown" {
+        mode 1920x1200
+        position 0,0
+        scale 1.0
+    }
 }
 
 profile presentation {

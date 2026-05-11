@@ -48,6 +48,12 @@ output * bg /home/manuel/Documents/pics/bg.jpg fill
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
+#
+# 'Clamshell mode'
+#
+bindswitch --reload --locked lid:on exec "[ $(swaymsg -t get_outputs | jq '. | length') -gt 1 ] && swaymsg output eDP-1 disable"
+bindswitch --reload --locked lid:off output eDP-1 enable
+
 input type:keyboard {
       xkb_model "pc105"
       xkb_layout "fi,es"
