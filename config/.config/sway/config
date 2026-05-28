@@ -167,7 +167,7 @@ workspace 0 output eDP-1
 
 for_window [app_id="tauon"] floating enable
 assign [app_id="tauon"] workspace number 9
-assign [app_id="telegram"] workspace number 4
+assign [app_id="signal"] workspace number 4
 assign [app_id="slack"] workspace number 4
 
 
