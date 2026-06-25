@@ -69,7 +69,7 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon}   {capacity}%",
+        "format": "{icon}  {capacity}%",
         "format-icons": [
             "<span color=\"#ff5555\"></span>",
             "<span color=\"#ffb86c\"></span>",
@@ -79,7 +79,7 @@
         ]
     },
     "network": {
-        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-wifi": "   {essid} ({signalStrength}%)",
         "format-ethernet": "{ifname} ",
         "format-disconnected": "⚠",
         "interval" : 7,
@@ -87,7 +87,7 @@
         "tooltip": false
     },
     "wireplumber": {
-	"format": "{volume}% {icon}",
+	"format": "{icon} {volume}%",
 	"format-muted": " off",
 	"format-icons": ["", "", ""],
 	"on-click": "helvum",
@@ -102,7 +102,7 @@
 	"scroll-step": 5
     },
    "backlight": {
-        "format": "{percent}% {icon}",
+        "format": "{icon} {percent}%",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
    },
 }
