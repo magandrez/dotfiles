@@ -4,7 +4,7 @@
     "height": 30,
     "margin": "5 10 5 10",
     "modules-left": ["sway/workspaces", "sway/language"],
-    "modules-right": ["cpu","temperature", "memory", "wireplumber", "wireplumber#source", "backlight", "battery", "power-profiles-daemon", "network", "clock", "tray"],
+    "modules-right": ["cpu","temperature", "memory", "wireplumber", "wireplumber#source", "backlight", "battery", "network", "clock", "tray"],
     "mode": {
 	"docked": {
 	    "output": ["eDP-1","DP-1"],
@@ -104,17 +104,6 @@
 	"on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
 	"scroll-step": 5
     },
-   "power-profiles-daemon": {
-        "format": "{icon}",
-        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-        "tooltip": true,
-        "format-icons": {
-            "default": "",
-            "performance": "",
-            "balanced": "",
-            "power-saver": ""
-        },
-   },
    "backlight": {
         "format": "{percent}% {icon}",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
