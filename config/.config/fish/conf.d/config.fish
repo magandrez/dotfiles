@@ -14,7 +14,7 @@ set -gx ASDF_DATA_DIR $HOME/.local/share/asdf
 contains $HOME/.local/bin $fish_user_paths; or set -Ua fish_user_paths $HOME/.local/bin
 contains /usr/local/go/bin $fish_user_paths; or set -Ua fish_user_paths /usr/local/go/bin
 contains ~/workbench/go/bin $fish_user_paths; or set -Ua fish_user_paths ~/workbench/go/bin
-contains /usr/local/pulumi/bin $fish_user_paths; or set -Ua fish_user_paths /usr/local/pulumi/bin
+
 # cd -
 abbr -a -- - 'cd -'
 
