@@ -63,7 +63,7 @@
         "format": "  {}%",
         "interval": 5,
         "exec": "free -h | awk '/Mem:/{printf $3/$2 * 100.0}'",
-        "tooltip": false,
+        "tooltip": true,
      },
     "battery": {
 	"interval": 10,
