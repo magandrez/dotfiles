@@ -60,6 +60,19 @@ window#waybar.hidden {
     min-width: 22px;
 }
 
+#temperature.critical {
+    color: #ffffff;
+    background-color: #cc241d;
+    animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+    to {
+        background-color: transparent;
+        color: #cc241d;
+    }
+}
+
 #clock {
     min-width: 130px;
 }
