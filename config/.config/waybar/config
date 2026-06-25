@@ -35,16 +35,13 @@
     "clock": {
         "tooltip": false,
         "interval": 1,
-        "format": "<span color=\"#ff5555\"></span>  {:%H : %M : %S}",
+        "format": "<span color=\"#ff5555\"></span>  {:%H : %M}",
         "format-alt": "<span color=\"#bd93f9\"></span>   {:%d.%m.%Y}"
     },
     "clock#time": {
-        "interval": 1,
-        "format": "{:%H:%M:%S}",
-        "tooltip": false
+        "format": "{:%H:%M}"
     },
     "clock#date": {
-      "interval": 10,
       "format": "  {:%e %b %Y}",
       "tooltip-format": "{:%e %B %Y}",
     },
