@@ -1,8 +1,8 @@
 [user]
 	name = Manuel González
 	email = manuel@manuel.is
-	signingKey = 0C72166F87541FE1
-        gpgSign = true
+	signingkey = 0C72166F87541FE1
+        gpgsign = true
         [includeIf "gitdir:~/workbench/work/"]
                    path = ~/workbench/work/.gitconfig
 [push]
@@ -23,15 +23,15 @@
 [fetch]
 	prune = true
 [commit]
-	gpgSign = true
+	gpgsign = true
 [init]
-	defaultBranch = main
+	defaultbranch = main
 [github]
 	user = magandrez
 [core]
 	autocrlf = input
 [gpg]
-	program = gpg
+	program = gpg2
 [forge]
 	remote = origin
 [merge]
