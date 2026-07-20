@@ -14,6 +14,7 @@ set -gx ASDF_DATA_DIR $HOME/.local/share/asdf
 fish_add_path $HOME/.local/bin
 fish_add_path /usr/local/go/bin
 fish_add_path $HOME/workbench/go/bin
+fish_add_path $HOME/.local/share/miniconda3/condabin
 
 # cd -
 abbr -a -- - 'cd -'

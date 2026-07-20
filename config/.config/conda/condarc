@@ -1,0 +1,4 @@
+pkgs_dirs:
+  - ~/.cache/conda/pkgs
+envs_dirs:
+  - ~/.local/share/miniconda3/envs
