@@ -1,4 +1,4 @@
-CONFIGS := bin config git gpg screen x desktop
+CONFIGS := bin config git gpg desktop
 
 all: $(CONFIGS)
 $(CONFIGS):
