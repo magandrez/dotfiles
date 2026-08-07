@@ -245,9 +245,9 @@ client.placeholder      #282a36 #0c0c0c #ffffff #000000   #282a36
 # Status Bar
 #
 # Read `man 5 waybar` for more information about this section.
-bar {
-    position top
-}
+# bar {
+#    position top
+#}
 
 #                       
 # Volume control        
