@@ -9,3 +9,4 @@ bin/.local/share/*
 !bin/.local/share/applications
 config/.config/MusicBrainz/.Picard.ini.synclock
 config/.config/sway/workspaces
+bin/.local/bin/aws*
