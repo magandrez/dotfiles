@@ -57,7 +57,7 @@
         "format-icons": ["", "", "!!!"]
     },
     "memory": {
-        "format": "  {}%",
+        "format": "  {}%",
         "interval": 5,
         "exec": "free -h | awk '/Mem:/{printf $3/$2 * 100.0}'",
         "tooltip": true,
@@ -103,6 +103,6 @@
     },
    "backlight": {
         "format": "{icon} {percent}%",
-        "format-icons": ["", "", "", "", "", "", "", "", ""]
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
    },
 }
