@@ -23,3 +23,4 @@ InconsolataGo
 
 - GNU Make
 - GNU Stow
+- direnv
