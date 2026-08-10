@@ -4,7 +4,6 @@ Description=Highly customizable Wayland bar for Sway and Wlroots based composito
 Documentation=https://github.com/Alexays/Waybar/wiki/
 PartOf=sway-session.target
 After=sway-session.target
-Requisite=sway-session.target
 
 [Service]
 ExecStart=/usr/bin/waybar
