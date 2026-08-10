@@ -10,3 +10,4 @@ Categories=GNOME;GTK;Network;InstantMessaging;
 MimeType=x-scheme-handler/slack;
 X-Desktop-File-Install-Version=0.28
 X-Flatpak-RenamedFrom=slack.desktop
+X-GNOME-UsesNotifications=true
