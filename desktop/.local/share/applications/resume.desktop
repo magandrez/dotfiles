@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=resume
 Comment=Enable screensaver (oposite to meet! command)
-Exec=resume
+Exec=/home/manuel/.local/bin/resume
 Terminal=false
 Type=Application
 Icon=network.cycles.wdisplays
