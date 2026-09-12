@@ -1,26 +1,15 @@
-profile home {
+profile home_1 {
 
-output 'Lenovo Group Limited LEN T32p-20 VNA41G9T' mode 3840x2160@60.0Hz position 1920,0 transform normal scale 1.0 adaptive_sync on
-output 'Lenovo Group Limited 0x403A Unknown' mode 1920x1200@60.001Hz position 0,420 transform normal scale 1.0 adaptive_sync on
+output 'Lenovo Group Limited LEN T32p-20 VNA41G9T' mode 3840x2160@60.0Hz position 0,0 transform normal scale 1.0 adaptive_sync on
+output 'Lenovo Group Limited 0x403A Unknown' mode 1920x1200@60.001Hz position 1008,2160 transform normal scale 1.0 adaptive_sync on
+}
+
+profile home_1 {
+
+# output 'Lenovo Group Limited LEN T32p-20 VNA41G9T' mode 3840x2160@60.0Hz position 0,0 transform normal scale 1.0 adaptive_sync on
+# The other
 }
 
 profile office {
-    output "Lenovo Group Limited LEN P27u-10 0x01010101" {
-        mode 2560x1440
-        position 1920,0
-        scale 1.0
-        adaptive_sync off
-    }
-
-    output "Lenovo Group Limited 0x403A Unknown" {
-        mode 1920x1200
-        position 0,0
-        scale 1.0
-    }
-}
-
-profile presentation {
-
-output 'Samsung Electric Company SyncMaster H1AK500000' mode  1920x1080@60.0Hz position 1136,0 transform normal scale 1.0 adaptive_sync on
-output 'Lenovo Group Limited 0x403A Unknown' mode  1920x1200@60.001Hz position 1136,1080 transform normal scale 1.0 adaptive_sync on
+  # Office
 }
