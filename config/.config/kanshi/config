@@ -5,10 +5,10 @@ profile home_1 {
 
 profile home_1 {
   output 'Lenovo Group Limited LEN T32p-20 VNA41G9T' mode 3840x2160@60.0Hz position 0,0 transform normal scale 1.0 adaptive_sync on
-  output 'Lenovo Group Limited MNE007QB1-1' mode 1920x1200@60.001Hz position 1111,2160 transform normal scale 1.0 adaptive_sync on
+  output 'Lenovo Group Limited MNE007QB1-1 Unknown' mode 1920x1200@60.001Hz position 1111,2160 transform normal scale 1.0 adaptive_sync on
 }
 
 profile office {
-  output 'Lenovo Group Limited MNE007QB1-1' mode 1920x1200@60.001Hz position 1111,2160 transform normal scale 1.0 adaptive_sync off
+  output 'Lenovo Group Limited MNE007QB1-1 Unknown' mode 1920x1200@60.001Hz position 1111,2160 transform normal scale 1.0 adaptive_sync off
   output 'Dell Inc. DELL P3223QE 70C4BP3' mode 3840x2160@59.997Hz position 0,0 transform normal scale 1.0 adaptive_sync off
 }
