@@ -10,6 +10,7 @@ set -gx DOCKER_HOST unix:///run/user/1000/docker.sock
 set -gx SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/openssh_agent"
 set -gx RIPGREP_CONFIG_PATH ~/.config/.ripgreprc
 set -gx ASDF_DATA_DIR $HOME/.local/share/asdf
+set -gx REGISTRY_AUTH_FILE ~/.config/containers/auth/auth.conf
 fish_add_path $HOME/.local/bin
 fish_add_path /usr/local/go/bin
 fish_add_path $HOME/workbench/go/bin
