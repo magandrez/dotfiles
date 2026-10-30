@@ -7,7 +7,7 @@ After=sway-session.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/kanshi
+ExecStart=/usr/bin/kanshi -c %h/.config/kanshi/config
 
 [Install]
 WantedBy=sway-session.target
