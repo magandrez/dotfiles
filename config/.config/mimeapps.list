@@ -1,0 +1,12 @@
+[Default Applications]
+x-scheme-handler/http=firefox-esr.desktop
+x-scheme-handler/https=firefox-esr.desktop
+x-scheme-handler/slack=slack.desktop
+x-scheme-handler/claude-cli=claude-code-url-handler.desktop
+text/html=firefox-esr.desktop
+x-scheme-handler/about=firefox-esr.desktop
+x-scheme-handler/unknown=firefox-esr.desktop
+image/png=firefox-esr.desktop
+x-scheme-handler/anytype=anytype.desktop
+
+[Added Associations]
