@@ -266,7 +266,12 @@ bindsym XF86MonBrightnessUp exec brightnessctl set 10%+
 #
 # Screenshots
 #
-bindsym --release Print exec grim -g "$(slurp)" - | swappy -f -
+bindsym --release Print exec /usr/local/bin/sway-interactive-screenshot
+
+#
+# Video recordings
+#
+bindsym Shift+Print exec /usr/local/bin/sway-interactive-screenshot --video
 
 #
 # Power management
