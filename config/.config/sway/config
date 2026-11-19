@@ -302,6 +302,13 @@ bindsym XF86PickupPhone exec bluetoothctl power on
 include /etc/sway/config.d/*
 
 #
+# Session variables missing from the systemd user environment (not imported by
+# /etc/sway/config.d/50-systemd-user.conf). Browsers check XDG_SESSION_TYPE to
+# choose PipeWire/portal screen capture.
+#
+exec /usr/bin/dbus-update-activation-environment --systemd XDG_SESSION_TYPE XDG_SESSION_DESKTOP
+
+#
 # Make sure to reach sway-session.target
 #
 exec_always systemctl --user start sway-session.target
