@@ -1,4 +1,4 @@
 [screencast]
-# For now, only eDP-1 and no option to choose
-output_name=eDP-1
-chooser_type=none
+chooser_type=simple
+chooser_cmd=slurp -f "%o" -or
+force_mod_linear=1
